@@ -35,4 +35,4 @@ def load_table():
     if not path.exists("value_table.csv"):
         generate_table()
     value_table_csv = pd.read_csv("value_table.csv")
-    return pd.DataFrame(value_table_csv)
+    return pd.DataFrame(value_table_csv)[['board', 'value']]
